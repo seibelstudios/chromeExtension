@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Focus",
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "images/eye.png",
+    "default_title": "Focus"
+  },
+  "description": "This Chrome Extension blocks certain distracting elements on sites where you should otherwise be doing more constructive things.",
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["jquery.min.js","./main.js"],
+      "css": ["index.css"]
+    }
+  ]
+
+
+
+}
